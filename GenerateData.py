@@ -20,11 +20,11 @@ year=2015
 airportIDs=['10140', '10299', '10397', '10423', '10529', '10693', '10721', '10792', '10800', '10821']
 
 # Month cycle
-for m in range(8, 10):  
+for m in range(8, 11):  
     # Day cycle
-    for d in range(1, 30):
+    for d in range(1, 31):
         # Hour cycle
-        for h in range(0, 23):
+        for h in range(0, 24):
             # Airport cycle
             for airportID in airportIDs:
                 # Create copies of user
