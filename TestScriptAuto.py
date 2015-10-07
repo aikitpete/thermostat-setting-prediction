@@ -5,17 +5,8 @@ import json
 
 
 data =  {
-
-        "Inputs": {
-
-                "Input":
-                {
-                    "ColumnNames": ["Temperature Preference", "Morning", "Noon", "Evening", "Temperature", "Wind", "Humidity"],
-                    "Values": [ [ "0", "0", "0", "0", "0", "0", "0" ], [ "0", "0", "0", "0", "0", "0", "0" ], ]
-                },        },
-            "GlobalParameters": {
+        "Response": "False"
 }
-    }
 
 body = str.encode(json.dumps(data))
 

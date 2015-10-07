@@ -2,7 +2,7 @@ import urllib2
 # If you are using Python 3+, import urllib instead of urllib2
 
 import json 
-
+import sys
 
 data =  {
 
@@ -10,12 +10,24 @@ data =  {
 
                 "Input":
                 {
-                    "ColumnNames": ["Temperature Preference", "Morning", "Noon", "Evening", "Temperature", "Wind", "Humidity"],
-                    "Values": [ [ "0", "0", "0", "0", "0", "0", "0" ], [ "0", "0", "0", "0", "0", "0", "0" ], ]
-                },        },
-            "GlobalParameters": {
+                    "ColumnNames": 
+                    [
+                        "Temperature", "Wind", "Humidity", "Temperature Preference", "Morning", "Noon", "Evening"
+                    ],
+                    "Values": 
+                    [ 
+                        [ 
+                            sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7]
+                        ], 
+                        [ 
+                            sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7]
+                        ] 
+                    ]
+                },        
+        },
+        "GlobalParameters": {
+        }
 }
-    }
 
 body = str.encode(json.dumps(data))
 
