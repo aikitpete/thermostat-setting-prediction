@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- dependencies (jquery, handlebars and bootstrap) -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+<link type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ 
+<!-- alpaca -->
+<link type="text/css" href="http://code.cloudcms.com/alpaca/1.5.14/bootstrap/alpaca.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="http://code.cloudcms.com/alpaca/1.5.14/bootstrap/alpaca.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Start your code here -->
+
+<p class="lw">AC Smart Scenario Test</p>
+  <a href="RequestResponse.py" onclick="javascript:void(0);" class="button">Python Script For testing the Web Service</a>
+  <a href="https://github.com/petegerhat/azure/blob/master/Excel%20model.xlsx" onclick="javascript:void(0);" class="button">Model in Excel</a>
+  <a href="http://gallery.azureml.net/Details/d63f4e708b784e21a6e143bffe8b0b9a" onclick="javascript:void(0);" class="button">Model in Azure</a>
+<a href="https://europewest.studio.azureml.net/Home/ViewWorkspace/8a441e205cc444b9857777ace9d422bb?#Workspaces/WebServiceGroups/WebServiceGroup/0d40d5ef0b5140179f34e34afd151d46/dashboard" onclick="javascript:void(0);" class="button">Web Service Preview</a>
+<a href="https://europewest.studio.azureml.net/apihelp/workspaces/8a441e205cc444b9857777ace9d422bb/webservices/0d40d5ef0b5140179f34e34afd151d46/endpoints/86c9bc5197f646269ded6dce7e95a2c9/score" onclick="javascript:void(0);" class="button">Web Service API</a>
+<a href="https://github.com/petegerhat/azure" onclick="javascript:void(0);" class="button">GitHub Repository</a>
+  <div id="form1"></div>
+  <!--<a id="submit" href="#" class="button">Submit</a>-->
+  <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-mb3i{background-color:#D2E4FC;text-align:right;vertical-align:top}
+.tg .tg-lqy6{text-align:right;vertical-align:top}
+.tg .tg-6k2t{background-color:#D2E4FC;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg" id="dataTable">
+  <!--<thead>
+    <tr><th class="tg-baqh" colspan="8">Results</th></tr>
+	<tr>
+    <th class="tg-6k2t">Temperature</th>
+    <th class="tg-6k2t">Humidity</th>
+    <th class="tg-6k2t">Wind</th>
+    <th class="tg-6k2t">Morning</th>
+    <th class="tg-6k2t">Noon</th>
+    <th class="tg-6k2t">Evening</th>
+    <th class="tg-6k2t">Midnight</th>
+	<th class="tg-6k2t"><strong>Recommended AC Setting</strong></th>
+	</tr>
+  </thead>-->
+</table>
+<br/>
+<br/>
+<div style="border:1px black solid;background-color:#EEEEEE">
+<h3>Debug Information</h3>
+<div id="debug"></div>
+</div>
+<!-- End your code here -->
+</body>
+</html>
+
