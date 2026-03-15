@@ -1,4 +1,4 @@
-# pythonon-azure
+# context-aware-device-prediction
 
 A prototype project exploring how user preferences, location, weather, and travel context can be used to predict device settings.
 

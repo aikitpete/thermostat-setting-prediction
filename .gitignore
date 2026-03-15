@@ -20,3 +20,7 @@ build/
 .idea/
 .vscode/
 *.iml
+# cleanup_repo.py additions
+.DS_Store
+*.pyc
+__pycache__/
