@@ -1,0 +1,22 @@
+# python
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+dist/
+build/
+.ipynb_checkpoints/
+
+# common
+.git/
+.DS_Store
+.idea/
+.vscode/
+*.iml
