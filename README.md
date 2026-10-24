@@ -8,6 +8,10 @@ The model combines the weather at the destination, the guest's preferred tempera
 Originally built in 2015 on a hosted ML service, with the model prototyped in a spreadsheet ([`docs/excel-model.xlsx`](docs/excel-model.xlsx)).
 This version is self-contained: a small Python package, a reproducible simulation and a static web demo.
 
+**Live demo:** <https://aikitpete.github.io/thermostat-setting-prediction/> (runs in the browser on a model fitted to simulated data)
+
+<img src="docs/demo.png" width="420" alt="Static demo: inputs for weather, preference and arrival time, with the predicted AC setting">
+
 ## How it works
 
 1. **Simulate** arrivals with the same generative process as the spreadsheet (`src/thermostat/data.py`): weather depends on the time of day, guests have a preferred temperature, and the AC setting grows with the gap between outside temperature and preference, amplified by wind and humidity.
