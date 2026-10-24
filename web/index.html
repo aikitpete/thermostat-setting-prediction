@@ -1,62 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<!-- dependencies (jquery, handlebars and bootstrap) -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
-<link type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
- 
-<!-- alpaca -->
-<link type="text/css" href="http://code.cloudcms.com/alpaca/1.5.14/bootstrap/alpaca.min.css" rel="stylesheet"/>
-<script type="text/javascript" src="http://code.cloudcms.com/alpaca/1.5.14/bootstrap/alpaca.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
-<link type="text/css" href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AC setting prediction</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="predict.js" defer></script>
 </head>
 <body>
-<!-- Start your code here -->
-
-<p class="lw">AC Smart Scenario Test</p>
-  <a href="RequestResponse.py" onclick="javascript:void(0);" class="button">Python Script For testing the Web Service</a>
-  <a href="https://github.com/petegerhat/azure/blob/master/Excel%20model.xlsx" onclick="javascript:void(0);" class="button">Model in Excel</a>
-  <a href="http://gallery.azureml.net/Details/d63f4e708b784e21a6e143bffe8b0b9a" onclick="javascript:void(0);" class="button">Model in Azure</a>
-<a href="https://europewest.studio.azureml.net/Home/ViewWorkspace/8a441e205cc444b9857777ace9d422bb?#Workspaces/WebServiceGroups/WebServiceGroup/0d40d5ef0b5140179f34e34afd151d46/dashboard" onclick="javascript:void(0);" class="button">Web Service Preview</a>
-<a href="https://europewest.studio.azureml.net/apihelp/workspaces/8a441e205cc444b9857777ace9d422bb/webservices/0d40d5ef0b5140179f34e34afd151d46/endpoints/86c9bc5197f646269ded6dce7e95a2c9/score" onclick="javascript:void(0);" class="button">Web Service API</a>
-<a href="https://github.com/petegerhat/azure" onclick="javascript:void(0);" class="button">GitHub Repository</a>
-  <div id="form1"></div>
-  <!--<a id="submit" href="#" class="button">Submit</a>-->
-  <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-mb3i{background-color:#D2E4FC;text-align:right;vertical-align:top}
-.tg .tg-lqy6{text-align:right;vertical-align:top}
-.tg .tg-6k2t{background-color:#D2E4FC;vertical-align:top}
-.tg .tg-yw4l{vertical-align:top}
-</style>
-<table class="tg" id="dataTable">
-  <!--<thead>
-    <tr><th class="tg-baqh" colspan="8">Results</th></tr>
-	<tr>
-    <th class="tg-6k2t">Temperature</th>
-    <th class="tg-6k2t">Humidity</th>
-    <th class="tg-6k2t">Wind</th>
-    <th class="tg-6k2t">Morning</th>
-    <th class="tg-6k2t">Noon</th>
-    <th class="tg-6k2t">Evening</th>
-    <th class="tg-6k2t">Midnight</th>
-	<th class="tg-6k2t"><strong>Recommended AC Setting</strong></th>
-	</tr>
-  </thead>-->
-</table>
-<br/>
-<br/>
-<div style="border:1px black solid;background-color:#EEEEEE">
-<h3>Debug Information</h3>
-<div id="debug"></div>
-</div>
-<!-- End your code here -->
+  <main>
+    <h1>Smart AC setting</h1>
+    <p class="lead">Predicts how strongly a hotel room should be cooled before a guest arrives, from the weather at the destination, the guest's preferred temperature and the arrival time.</p>
+    <form id="form" autocomplete="off">
+      <label>Outside temperature (°C) <input name="temperature" type="number" step="0.1" min="-20" max="50" value="33" required></label>
+      <label>Humidity (%) <input name="humidity" type="number" step="1" min="0" max="100" value="70" required></label>
+      <label>Wind speed <input name="wind" type="number" step="0.1" min="0" max="50" value="10" required></label>
+      <label>Guest's preferred temperature (°C) <input name="preference" type="number" step="0.1" min="-20" max="50" value="22" required></label>
+      <label>Arrival time <input name="time" type="time" value="13:00" required></label>
+    </form>
+    <p class="result">AC setting: <strong id="result">–</strong> <span class="hint">(larger = stronger cooling)</span></p>
+    <p class="hint">Runs entirely in the browser using the coefficients in <code>model.json</code>. Regenerate them with <code>thermostat train</code>.</p>
+  </main>
 </body>
 </html>
-

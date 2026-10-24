@@ -1,26 +1,15 @@
-# python
+# Python
 __pycache__/
 *.py[cod]
-.Python
+*.egg-info/
 .venv/
 venv/
-env/
 .pytest_cache/
-.mypy_cache/
 .ruff_cache/
-.coverage
-coverage.xml
-dist/
 build/
-.ipynb_checkpoints/
+dist/
 
-# common
-.git/
+# Editors and OS
 .DS_Store
 .idea/
 .vscode/
-*.iml
-# cleanup_repo.py additions
-.DS_Store
-*.pyc
-__pycache__/

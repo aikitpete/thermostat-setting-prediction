@@ -1,0 +1,23 @@
+{
+  "interaction": true,
+  "features": [
+    "temperature",
+    "wind",
+    "humidity",
+    "preference",
+    "morning",
+    "noon",
+    "evening"
+  ],
+  "coefficients": {
+    "intercept": -0.2966241908793949,
+    "temperature": -0.010659643237555121,
+    "wind": 0.009152441523344022,
+    "humidity": -0.00018211774695357623,
+    "preference": 0.014657836432203432,
+    "morning": 0.07676343270362193,
+    "noon": 0.16129385076890732,
+    "evening": -0.06749026618227923,
+    "comfort_gap_x_wind_humidity": 1.0089168491769864
+  }
+}
