@@ -1,9 +1,9 @@
 # Thermostat setting prediction
 
+[![CI](https://img.shields.io/github/actions/workflow/status/aikitpete/thermostat-setting-prediction/ci.yml?branch=master&label=CI)](https://github.com/aikitpete/thermostat-setting-prediction/actions/workflows/ci.yml) [![License](https://img.shields.io/github/license/aikitpete/thermostat-setting-prediction)](LICENSE) [![Live demo](https://img.shields.io/badge/demo-live-brightgreen)](https://aikitpete.github.io/thermostat-setting-prediction/) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?logo=pytest&logoColor=white)
+
 Context-aware AC setting prediction for hotels: have the room at the right temperature when the guest walks in.
 The model combines the weather at the destination, the guest's preferred temperature and the arrival time of day.
-
-[![CI](https://github.com/aikitpete/thermostat-setting-prediction/actions/workflows/ci.yml/badge.svg)](https://github.com/aikitpete/thermostat-setting-prediction/actions/workflows/ci.yml)
 
 Originally built in 2015 on a hosted ML service, with the model prototyped in a spreadsheet ([`docs/excel-model.xlsx`](docs/excel-model.xlsx)).
 This version is self-contained: a small Python package, a reproducible simulation and a static web demo.
